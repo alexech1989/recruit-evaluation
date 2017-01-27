@@ -1,0 +1,16 @@
+{
+    "require": {
+        "slim/slim": "^3.7",
+        "slim/twig-view": "^2.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "RecruIT\\Evaluation\\Helpers\\": "src/classes/Helpers",
+        "RecruIT\\Evaluation\\Web\\Infrastructure\\": "src/classes/Web/Infrastructure",
+        "RecruIT\\Evaluation\\Web\\Models\\": "src/classes/Web/Models",
+        "RecruIT\\Evaluation\\Web\\Repositories\\": "src/classes/Web/Repositories",
+        "RecruIT\\Evaluation\\Web\\Rest\\": "src/classes/Web/Rest",
+        "RecruIT\\Evaluation\\Web\\Services\\": "src/classes/Web/Services"
+      }
+    }
+}

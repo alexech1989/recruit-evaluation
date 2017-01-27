@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% endblock %}
+    {% block scripts %}{% endblock %}
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Developers SAC" src="../images/logo.png" width="25">
+          </a>
+        </div>
+        <p class="navbar-text">DEVELOPERS SAC</p>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{% block panelHead %}{% endblock %}</div>
+        <div class="panel-body">
+          {% block panelContent %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
