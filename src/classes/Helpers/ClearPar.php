@@ -48,7 +48,7 @@
     {
       return array_reduce($sequence, function ($isParenthesis, $value)
       {
-        return $isParenthesis && in_array($value, ['(', ')'])
+        return $isParenthesis && in_array($value, ['(', ')']);
       }, true);
     }
 
