@@ -45,9 +45,13 @@
 
   $employeeController = new EmployeeController($employeeService, $container);
 
-  $app->get('/employees', array($employeeController, 'index'));
-  $app->get('/employees/{id}', array($employeeController, 'details'));
-  $app->get('/employees/download/xml', array($employeeController, 'download'));
+  // App routes deficitions
+  $app->get('/employees', array($employeeController, 'index'))
+    ->setName('app.employees');
+  $app->get('/employees/{id}', array($employeeController, 'details'))
+    ->setName('app.employee.details');
+  $app->get('/employees/download/xml', array($employeeController, 'download'))
+    ->setName('app.employees.xml');
 
   $app->run();
 

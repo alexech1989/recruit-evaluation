@@ -35,7 +35,7 @@
       </div>
       <div class="col-md-7">
         <button type="button" class="btn btn-default" id="button-search">Search</button>
-        <a type="button" class="btn btn-success" id="button-search" href="/employees/download/xml" download>
+        <a type="button" class="btn btn-success" id="button-search" href="{{ path_for('app.employees.xml') }}" download>
           <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
           Download as XML (salary [1000 - 1500])
         </a>
@@ -60,7 +60,8 @@
       <td>{{ employee.getPosition() }}</td>
       <td>{{ employee.getSalary() }}</td>
       <td>
-        <a class="btn btn-default" aria-label="Left Align" href="/employees/{{ employee.getId() }}">
+        <a class="btn btn-default" aria-label="Left Align"
+          href="{{ path_for('app.employee.details', { id: employee.getId() }) }}">
           <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
         </a>
       </td>
